@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8577],{5124:function(n,u,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/tai-nguyen-nuoc/bao-cao-bieu-mau",function(){return _(87208)}])}},function(n){n.O(0,[2251,6541,822,8157,4424,5370,5258,5077,3270,235,2888,9774,179],function(){return n(n.s=5124)}),_N_E=n.O()}]);
