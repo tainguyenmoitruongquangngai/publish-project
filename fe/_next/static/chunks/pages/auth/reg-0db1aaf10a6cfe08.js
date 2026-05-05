@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9074],{52804:function(n,u,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/auth/reg",function(){return t(4140)}])},4140:function(n,u,t){"use strict";t.r(u);var _=t(86377);u.default=_.default}},function(n){n.O(0,[4609,4581,5527,492,333,6377,2888,9774,179],function(){return n(n.s=52804)}),_N_E=n.O()}]);
