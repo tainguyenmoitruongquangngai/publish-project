@@ -1,0 +1,764 @@
+warn: Microsoft.EntityFrameworkCore.Model.Validation[10400]
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (96ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[Id], [a].[CreatedTime], [a].[CreatedUser], [a].[IsDeleted], [a].[ModifiedTime], [a].[ModifiedUser], [a].[Module], [a].[Name], [a].[Path], [a].[PathKey], [a].[PermitAccess]
+      FROM [AuthDashboards] AS [a]
+      WHERE [a].[IsDeleted] = CAST(0 AS bit)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (224ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[Id], [a].[Description], [a].[PermitCode], [a].[PermitName]
+      FROM [AuthFunctions] AS [a]
+      WHERE ([a].[PermitCode] IS NOT NULL) AND NOT ([a].[PermitCode] LIKE N'')
+warn: Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository[50]
+      Using an in-memory repository. Keys will not be persisted to storage.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[59]
+      Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {ac86ffa3-d5de-4280-b076-4c1a6752b9c7} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\Administrator\Documents\deploy\publish-project\api
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (79ms) [Parameters=[@__normalizedUserName_0='NDDKSDAONGOCLYSON' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedTime], [a].[CreatedUser], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IdHuyen], [a].[IsDeleted], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedTime], [a].[ModifiedUser], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordSalt], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@__user_Id_0='d13b77d4-01fe-4320-bf91-737f14b20d02' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+      FROM [AspNetUserClaims] AS [a]
+      WHERE [a].[UserId] = @__user_Id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (17ms) [Parameters=[@__userId_0='d13b77d4-01fe-4320-bf91-737f14b20d02' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [a0].[Name]
+      FROM [AspNetUserRoles] AS [a]
+      INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+      WHERE [a].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (17ms) [Parameters=[@__normalizedName_0='CONSTRUCTION' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreatedTime], [a].[CreatedUser], [a].[Description], [a].[IsDefault], [a].[IsDeleted], [a].[ModifiedTime], [a].[ModifiedUser], [a].[Name], [a].[NormalizedName]
+      FROM [AspNetRoles] AS [a]
+      WHERE [a].[NormalizedName] = @__normalizedName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__role_Id_0='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[ClaimType], [a].[ClaimValue]
+      FROM [AspNetRoleClaims] AS [a]
+      WHERE [a].[RoleId] = @__role_Id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (17ms) [Parameters=[@__normalizedUserName_0='NDDKSDAONGOCLYSON' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedTime], [a].[CreatedUser], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IdHuyen], [a].[IsDeleted], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedTime], [a].[ModifiedUser], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordSalt], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (18ms) [Parameters=[@__userId_0='d13b77d4-01fe-4320-bf91-737f14b20d02' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [a0].[Name]
+      FROM [AspNetUserRoles] AS [a]
+      INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+      WHERE [a].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__normalizedName_0='CONSTRUCTION' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreatedTime], [a].[CreatedUser], [a].[Description], [a].[IsDefault], [a].[IsDeleted], [a].[ModifiedTime], [a].[ModifiedUser], [a].[Name], [a].[NormalizedName]
+      FROM [AspNetRoles] AS [a]
+      WHERE [a].[NormalizedName] = @__normalizedName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (17ms) [Parameters=[@__8__locals2_roleEntity_Id_0='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[DashboardId]
+      FROM [AuthRoleDashboards] AS [a]
+      WHERE [a].[RoleId] = @__8__locals2_roleEntity_Id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (263ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[Id], [a].[CreatedTime], [a].[CreatedUser], [a].[IsDeleted], [a].[ModifiedTime], [a].[ModifiedUser], [a].[Module], [a].[Name], [a].[Path], [a].[PathKey], [a].[PermitAccess]
+      FROM [AuthDashboards] AS [a]
+      WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[Id] IN (8, 9, 10, 100, 105, 107, 108, 110, 111, 112, 99, 99, 99, 99, 99, 113)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[Id], [a].[Description], [a].[PermitCode], [a].[PermitName]
+      FROM [AuthFunctions] AS [a]
+      WHERE [a].[Id] > 0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@__f_Id_0='1' (Nullable = true), @__dash_Id_1='99' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__f_Id_0='2' (Nullable = true), @__dash_Id_1='99' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__f_Id_0='3' (Nullable = true), @__dash_Id_1='99' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__f_Id_0='4' (Nullable = true), @__dash_Id_1='99' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@__f_Id_0='5' (Nullable = true), @__dash_Id_1='99' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[Id], [a].[Description], [a].[PermitCode], [a].[PermitName]
+      FROM [AuthFunctions] AS [a]
+      WHERE [a].[Id] > 0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__f_Id_0='1' (Nullable = true), @__dash_Id_1='105' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__f_Id_0='2' (Nullable = true), @__dash_Id_1='105' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__f_Id_0='3' (Nullable = true), @__dash_Id_1='105' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__f_Id_0='4' (Nullable = true), @__dash_Id_1='105' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__f_Id_0='5' (Nullable = true), @__dash_Id_1='105' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[Id], [a].[Description], [a].[PermitCode], [a].[PermitName]
+      FROM [AuthFunctions] AS [a]
+      WHERE [a].[Id] > 0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__f_Id_0='1' (Nullable = true), @__dash_Id_1='108' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__f_Id_0='2' (Nullable = true), @__dash_Id_1='108' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__f_Id_0='3' (Nullable = true), @__dash_Id_1='108' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__f_Id_0='4' (Nullable = true), @__dash_Id_1='108' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__f_Id_0='5' (Nullable = true), @__dash_Id_1='108' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[Id], [a].[Description], [a].[PermitCode], [a].[PermitName]
+      FROM [AuthFunctions] AS [a]
+      WHERE [a].[Id] > 0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__f_Id_0='1' (Nullable = true), @__dash_Id_1='110' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__f_Id_0='2' (Nullable = true), @__dash_Id_1='110' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__f_Id_0='3' (Nullable = true), @__dash_Id_1='110' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__f_Id_0='4' (Nullable = true), @__dash_Id_1='110' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__f_Id_0='5' (Nullable = true), @__dash_Id_1='110' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[Id], [a].[Description], [a].[PermitCode], [a].[PermitName]
+      FROM [AuthFunctions] AS [a]
+      WHERE [a].[Id] > 0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (249ms) [Parameters=[@__f_Id_0='1' (Nullable = true), @__dash_Id_1='111' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__f_Id_0='2' (Nullable = true), @__dash_Id_1='111' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__f_Id_0='3' (Nullable = true), @__dash_Id_1='111' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@__f_Id_0='4' (Nullable = true), @__dash_Id_1='111' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__f_Id_0='5' (Nullable = true), @__dash_Id_1='111' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[Id], [a].[Description], [a].[PermitCode], [a].[PermitName]
+      FROM [AuthFunctions] AS [a]
+      WHERE [a].[Id] > 0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__f_Id_0='1' (Nullable = true), @__dash_Id_1='113' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (17ms) [Parameters=[@__f_Id_0='2' (Nullable = true), @__dash_Id_1='113' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (17ms) [Parameters=[@__f_Id_0='3' (Nullable = true), @__dash_Id_1='113' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__f_Id_0='4' (Nullable = true), @__dash_Id_1='113' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (17ms) [Parameters=[@__f_Id_0='5' (Nullable = true), @__dash_Id_1='113' (Nullable = true), @__8__locals2_roleEntity_Id_2='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT CASE
+          WHEN EXISTS (
+              SELECT 1
+              FROM [AuthPermissions] AS [a]
+              WHERE [a].[FunctionId] = @__f_Id_0 AND [a].[DashboardId] = @__dash_Id_1 AND [a].[RoleId] = @__8__locals2_roleEntity_Id_2) THEN CAST(1 AS bit)
+          ELSE CAST(0 AS bit)
+      END
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (18ms) [Parameters=[@__user_Id_0='d13b77d4-01fe-4320-bf91-737f14b20d02' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT [a].[DashboardId]
+      FROM [AuthUserDashboards] AS [a]
+      WHERE [a].[UserId] = @__user_Id_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (248ms) [Parameters=[@__p_0='d13b77d4-01fe-4320-bf91-737f14b20d02' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedTime], [a].[CreatedUser], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IdHuyen], [a].[IsDeleted], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedTime], [a].[ModifiedUser], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordSalt], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@__userId_0='d13b77d4-01fe-4320-bf91-737f14b20d02' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT [a0].[Name]
+      FROM [AspNetUserRoles] AS [a]
+      INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+      WHERE [a].[UserId] = @__userId_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (26ms) [Parameters=[@__currentUser_UserName_0='NDDKSDAONGOCLYSON' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[CapCT], [c].[ChuThich], [c].[DaXoa], [c].[IdLoaiCT], [c].[IdLuuVuc], [c].[IdSong], [c].[IdTangChuaNuoc], [c].[IdTieuLuuVuc], [c].[KhoiLuongCacHangMucTD], [c].[MaCT], [c].[MucDichHNK], [c].[MucDichKT], [c].[MucDichhTD], [c].[NamBatDauVanHanh], [c].[NguonNuocKT], [c].[PhuongThucKT], [c].[QKTThietKe], [c].[QKTThucTe], [c].[QuyMoHNK], [c].[SoDiemXaThai], [c].[SoLuongGieng], [c].[SoLuongGiengKT], [c].[SoLuongGiengQT], [c].[TaiKhoan], [c].[TaiKhoanSua], [c].[TaiKhoanTao], [c].[TenCT], [c].[ThoiGianHNK], [c].[ThoiGianKT], [c].[ThoiGianSua], [c].[ThoiGianTao], [c].[ThoiGianXD], [c].[ViTriCT], [c].[ViTriXT], [c].[X], [c].[Y], [c0].[Id], [c0].[ChuThich], [c0].[DaXoa], [c0].[IdCha], [c0].[MaLoaiCT], [c0].[TaiKhoanSua], [c0].[TaiKhoanTao], [c0].[TenLoaiCT], [c0].[ThoiGianSua], [c0].[ThoiGianTao]
+      FROM [CT_ThongTin] AS [c]
+      LEFT JOIN [CT_Loai] AS [c0] ON [c].[IdLoaiCT] = [c0].[Id]
+      WHERE [c].[TaiKhoan] = @__currentUser_UserName_0 AND ([c].[DaXoa] <> CAST(1 AS bit) OR ([c].[DaXoa] IS NULL))
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (29ms) [Parameters=[@__construction_Id_0='39' (Nullable = true)], CommandType='Text', CommandTimeout='30']
+      SELECT [g].[Id], [g].[CoQuanCapPhep], [g].[DaBiThuHoi], [g].[DaXoa], [g].[FileDonXinCP], [g].[FileGiayPhep], [g].[FileGiayToLienQuan], [g].[IdCT], [g].[IdCon], [g].[IdLoaiGP], [g].[IdTCCN], [g].[NgayCoHieuLuc], [g].[NgayHetHieuLuc], [g].[NgayKy], [g].[SoGP], [g].[TaiKhoanSua], [g].[TaiKhoanTao], [g].[TenGP], [g].[ThoiGianSua], [g].[ThoiGianTao], [g].[ThoiHan], [g].[TrangThaiCapPhep], [t].[Id], [t].[DaXoa], [t].[DiaChi], [t].[Email], [t].[Fax], [t].[GiamDoc], [t].[MaSoThue], [t].[NguoiDaiDienPhapLuat], [t].[NguoiDuocUyQuyen], [t].[SDT], [t].[TaiKhoan], [t].[TaiKhoanSua], [t].[TaiKhoanTao], [t].[TenTCCN], [t].[ThoiGianSua], [t].[ThoiGianTao]
+      FROM [GP_ThongTin] AS [g]
+      LEFT JOIN [ToChuc_CaNhan] AS [t] ON [g].[IdTCCN] = [t].[Id]
+      WHERE [g].[IdCT] = @__construction_Id_0 AND (([g].[NgayHetHieuLuc] IS NULL) OR [g].[NgayHetHieuLuc] > GETDATE()) AND ([g].[DaBiThuHoi] <> CAST(1 AS bit) OR ([g].[DaBiThuHoi] IS NULL)) AND ([g].[DaXoa] <> CAST(1 AS bit) OR ([g].[DaXoa] IS NULL))
+      ORDER BY [g].[NgayKy] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (19ms) [Parameters=[@__ToLower_0='nddksdaongoclyson' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [d].[Id], [d].[CameraLink], [d].[CreatedTime], [d].[CreatedUser], [d].[DataType], [d].[FTPAddress], [d].[ModifiedTime], [d].[ModifiedUser], [d].[Password], [d].[Port], [d].[Protocol], [d].[Status], [d].[Username], [d].[WorkingDirectory]
+      FROM [DataTransmissionAccounts] AS [d]
+      WHERE ([d].[Username] IS NOT NULL) AND LOWER([d].[Username]) = @__ToLower_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [x].[IdXa], [x].[CapHanhChinh], [x].[DaXoa], [x].[IdHuyen], [x].[TaiKhoanSua], [x].[TaiKhoanTao], [x].[TenXa], [x].[ThoiGianSua], [x].[ThoiGianTao]
+      FROM [Xa] AS [x]
+      WHERE [x].[DaXoa] = CAST(0 AS bit)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [l].[Id], [l].[BanDo], [l].[ChieuDaiSongChinh], [l].[ChuGiai], [l].[DaXoa], [l].[DienTich], [l].[FileKML], [l].[IdHuyen], [l].[IdXa], [l].[NgayBatDau], [l].[NgayKetThuc], [l].[SoQuyTrinh], [l].[TaiKhoanSua], [l].[TaiKhoanTao], [l].[TenLVS], [l].[ThoiGianSua], [l].[ThoiGianTao], [l].[ViTriQT]
+      FROM [LuuVucSong] AS [l]
+      WHERE [l].[DaXoa] = CAST(0 AS bit)
+      ORDER BY [l].[TenLVS]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [h].[IdHuyen], [h].[CapHanhChinh], [h].[DaXoa], [h].[TaiKhoanSua], [h].[TaiKhoanTao], [h].[TenHuyen], [h].[ThoiGianSua], [h].[ThoiGianTao]
+      FROM [Huyen] AS [h]
+      WHERE [h].[DaXoa] = CAST(0 AS bit)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[ChuThich], [c].[DaXoa], [c].[IdCha], [c].[MaLoaiCT], [c].[TaiKhoanSua], [c].[TaiKhoanTao], [c].[TenLoaiCT], [c].[ThoiGianSua], [c].[ThoiGianTao]
+      FROM [CT_Loai] AS [c]
+      WHERE [c].[DaXoa] = CAST(0 AS bit)
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [t].[Id], [t].[DaXoa], [t].[KyHieuTCN], [t].[SoLuongGiengQT], [t].[TaiKhoanSua], [t].[TaiKhoanTao], [t].[TenTCN], [t].[ThoiGianSua], [t].[ThoiGianTao]
+      FROM [TangChuaNuoc] AS [t]
+      WHERE [t].[DaXoa] = CAST(0 AS bit)
+      ORDER BY [t].[TenTCN]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[ChuGiai], [s].[DaXoa], [s].[IdHuyenCuoiSong], [s].[IdHuyenDauSong], [s].[IdLuuVuc], [s].[IdXaCuoiSong], [s].[IdXaDauSong], [s].[MaSong], [s].[Qtt], [s].[TaiKhoanSua], [s].[TaiKhoanTao], [s].[TenSong], [s].[ThoiGianSua], [s].[ThoiGianTao], [s].[XCuoiSong], [s].[XDauSong], [s].[YCuoiSong], [s].[YDauSong], [l].[Id], [l].[BanDo], [l].[ChieuDaiSongChinh], [l].[ChuGiai], [l].[DaXoa], [l].[DienTich], [l].[FileKML], [l].[IdHuyen], [l].[IdXa], [l].[NgayBatDau], [l].[NgayKetThuc], [l].[SoQuyTrinh], [l].[TaiKhoanSua], [l].[TaiKhoanTao], [l].[TenLVS], [l].[ThoiGianSua], [l].[ThoiGianTao], [l].[ViTriQT]
+      FROM [Song] AS [s]
+      LEFT JOIN [LuuVucSong] AS [l] ON [s].[IdLuuVuc] = [l].[Id]
+      WHERE [s].[DaXoa] = CAST(0 AS bit)
+      ORDER BY [s].[TenSong]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [g].[Id], [g].[DaXoa], [g].[GhiChu], [g].[MaLoaiGP], [g].[TaiKhoanSua], [g].[TaiKhoanTao], [g].[TenLoaiGP], [g].[ThoiGianSua], [g].[ThoiGianTao]
+      FROM [GP_Loai] AS [g]
+      WHERE [g].[DaXoa] = CAST(0 AS bit)
+      ORDER BY [g].[TenLoaiGP]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__p_0='d13b77d4-01fe-4320-bf91-737f14b20d02' (Size = 450)], CommandType='Text', CommandTimeout='120']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedTime], [a].[CreatedUser], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IdHuyen], [a].[IsDeleted], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedTime], [a].[ModifiedUser], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordSalt], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (19ms) [Parameters=[@__p_0='d13b77d4-01fe-4320-bf91-737f14b20d02' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedTime], [a].[CreatedUser], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IdHuyen], [a].[IsDeleted], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedTime], [a].[ModifiedUser], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordSalt], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[@__normalizedRoleName_0='CONSTRUCTION' (Size = 256)], CommandType='Text', CommandTimeout='120']
+      SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[CreatedTime], [a].[CreatedUser], [a].[Description], [a].[IsDefault], [a].[IsDeleted], [a].[ModifiedTime], [a].[ModifiedUser], [a].[Name], [a].[NormalizedName]
+      FROM [AspNetRoles] AS [a]
+      WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (18ms) [Parameters=[@__normalizedRoleName_0='CONSTRUCTION' (Size = 256)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[CreatedTime], [a].[CreatedUser], [a].[Description], [a].[IsDefault], [a].[IsDeleted], [a].[ModifiedTime], [a].[ModifiedUser], [a].[Name], [a].[NormalizedName]
+      FROM [AspNetRoles] AS [a]
+      WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [GP_ThongTin] AS [g]
+      WHERE [g].[DaXoa] = CAST(0 AS bit)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [t].[Id], [t].[CoQuanCP], [t].[DaXoa], [t].[FilePDF], [t].[GhiChu], [t].[IdCon], [t].[NgayKy], [t].[SoQDTCQ], [t].[TaiKhoanSua], [t].[TaiKhoanTao], [t].[ThoiGianSua], [t].[ThoiGianTao], [t].[TongTienCQ], [g].[Id], [g].[IdGP], [g].[IdTCQ]
+      FROM [TCQ_ThongTin] AS [t]
+      LEFT JOIN [GP_TCQ] AS [g] ON [t].[Id] = [g].[IdTCQ]
+      WHERE [t].[DaXoa] = CAST(0 AS bit)
+      ORDER BY [t].[NgayKy] DESC, [t].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [GP_ThongTin] AS [g]
+      WHERE [g].[DaXoa] = CAST(0 AS bit) AND LOWER([g].[CoQuanCapPhep]) = N'btnmt'
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__p_0='d13b77d4-01fe-4320-bf91-737f14b20d02' (Size = 450), @__p_1='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 450)], CommandType='Text', CommandTimeout='120']
+      SELECT TOP(1) [a].[UserId], [a].[RoleId]
+      FROM [AspNetUserRoles] AS [a]
+      WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__p_0='d13b77d4-01fe-4320-bf91-737f14b20d02' (Size = 450), @__p_1='7bd48ecd-c328-4ada-8e05-9358b385597f' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[UserId], [a].[RoleId]
+      FROM [AspNetUserRoles] AS [a]
+      WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [GP_ThongTin] AS [g]
+      WHERE [g].[DaXoa] = CAST(0 AS bit) AND LOWER([g].[CoQuanCapPhep]) = N'ubndt'
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (235ms) [Parameters=[@__normalizedRoleName_0='BUSINESS' (Size = 256)], CommandType='Text', CommandTimeout='120']
+      SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[CreatedTime], [a].[CreatedUser], [a].[Description], [a].[IsDefault], [a].[IsDeleted], [a].[ModifiedTime], [a].[ModifiedUser], [a].[Name], [a].[NormalizedName]
+      FROM [AspNetRoles] AS [a]
+      WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (235ms) [Parameters=[@__IdLoaiCT_0='2' (Nullable = true), @__ToLower_1='nddksdaongoclyson' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [CT_ThongTin] AS [c]
+      LEFT JOIN [CT_Loai] AS [c0] ON [c].[IdLoaiCT] = [c0].[Id]
+      WHERE [c].[DaXoa] = CAST(0 AS bit) AND [c0].[IdCha] = @__IdLoaiCT_0 AND LOWER([c].[TaiKhoan]) = @__ToLower_1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [t].[Id], [t].[CoQuanCP], [t].[DaXoa], [t].[FilePDF], [t].[GhiChu], [t].[IdCon], [t].[NgayKy], [t].[SoQDTCQ], [t].[TaiKhoanSua], [t].[TaiKhoanTao], [t].[ThoiGianSua], [t].[ThoiGianTao], [t].[TongTienCQ], [g].[Id], [g].[IdGP], [g].[IdTCQ]
+      FROM [TCQ_ThongTin] AS [t]
+      LEFT JOIN [GP_TCQ] AS [g] ON [t].[Id] = [g].[IdTCQ]
+      WHERE [t].[DaXoa] = CAST(0 AS bit) AND [t].[CoQuanCP] = N'UBNDT'
+      ORDER BY [t].[NgayKy] DESC, [t].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (20ms) [Parameters=[@__p_0='d13b77d4-01fe-4320-bf91-737f14b20d02' (Size = 450), @__p_1='11fdb212-da4d-40a1-90da-07f8bb9c3765' (Size = 450)], CommandType='Text', CommandTimeout='120']
+      SELECT TOP(1) [a].[UserId], [a].[RoleId]
+      FROM [AspNetUserRoles] AS [a]
+      WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (18ms) [Parameters=[@__ToLower_0='nddksdaongoclyson' (Size = 4000)], CommandType='Text', CommandTimeout='120']
+      SELECT COUNT(*)
+      FROM [CT_ThongTin] AS [c]
+      WHERE [c].[DaXoa] = CAST(0 AS bit) AND LOWER([c].[TaiKhoan]) = @__ToLower_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (51ms) [Parameters=[@__IdLoaiCT_0='2' (Nullable = true), @__ToLower_1='nddksdaongoclyson' (Size = 4000), @__p_2='0', @__p_3='10'], CommandType='Text', CommandTimeout='30']
+      SELECT [t].[Id], [t].[MaCT], [t].[TenCT], [t].[IdLoaiCT], [t].[X], [t].[Y], [t].[Id0], [t].[TenLoaiCT], [t].[IdCha], [t].[MaLoaiCT], [c1].[Id], [c1].[CaoTrinhCong], [c1].[CaoTrinhDap], [c1].[CheDoKT], [c1].[CheDoXT], [c1].[ChieuCaoDap], [c1].[ChieuDaiCong], [c1].[ChieuDaiDap], [c1].[ChieuRongDap], [c1].[ChieuSauDoanThuNuocDen], [c1].[ChieuSauDoanThuNuocTu], [c1].[CongSuatBom], [c1].[CongSuatDamBao], [c1].[CongSuatLM], [c1].[DienTichLuuVuc], [c1].[DienTichTuoiThietKe], [c1].[DienTichTuoiThucTe], [c1].[DungTichChet], [c1].[DungTichHuuIch], [c1].[DungTichToanBo], [c1].[DuongKinhCong], [c1].[HBeHut], [c1].[HDatOngLocDen], [c1].[HDatOngLocTu], [c1].[HDoanThuNuocDen], [c1].[HDoanThuNuocTu], [c1].[HDong], [c1].[HGiengKT], [c1].[HHaLuu], [c1].[HHaThap], [c1].[HThuongLuu], [c1].[HTinh], [c1].[Hgieng], [c1].[Hlu], [c1].[Hmax], [c1].[Hmin], [c1].[HtoiThieu], [c1].[IdCT], [c1].[IdHangMucCT], [c1].[KichThuocCong], [c1].[KqKf], [c1].[LuongNuocKT], [c1].[MNC], [c1].[MNDBT], [c1].[MNLKT], [c1].[MNLTK], [c1].[MuaTrungBinhNam], [c1].[MucNuocDong], [c1].[MucNuocTinh], [c1].[NguonNuocXT], [c1].[NguongTran], [c1].[PhuongThucXT], [c1].[QBomLonNhat], [c1].[QBomThietKe], [c1].[QDamBao], [c1].[QKTCapNuocSinhHoat], [c1].[QKTLonNhat], [c1].[QKhaiThac], [c1].[QLonNhatTruocLu], [c1].[QMaxKT], [c1].[QMaxXaThai], [c1].[QThietKe], [c1].[QThucTe], [c1].[QTrungBinhNam], [c1].[QXaThai], [c1].[QXaThaiLonNhat], [c1].[QXaThaiTB], [c1].[QXaTran], [c1].[QmaxNM], [c1].[Qtt], [c1].[SoLuongMayBom], [c1].[ThoiGianBomLonNhat], [c1].[ThoiGianBomNhoNhat], [c1].[ThoiGianBomTB], [g].[Id], [g].[CoQuanCapPhep], [g].[DaBiThuHoi], [g].[DaXoa], [g].[FileDonXinCP], [g].[FileGiayPhep], [g].[FileGiayToLienQuan], [g].[IdCT], [g].[IdCon], [g].[IdLoaiGP], [g].[IdTCCN], [g].[NgayCoHieuLuc], [g].[NgayHetHieuLuc], [g].[NgayKy], [g].[SoGP], [g].[TaiKhoanSua], [g].[TaiKhoanTao], [g].[TenGP], [g].[ThoiGianSua], [g].[ThoiGianTao], [g].[ThoiHan], [g].[TrangThaiCapPhep], (
+          SELECT TOP(1) [g0].[CoQuanCapPhep]
+          FROM [GP_ThongTin] AS [g0]
+          WHERE [t].[Id] = [g0].[IdCT]
+          ORDER BY [g0].[NgayKy] DESC)
+      FROM (
+          SELECT [c].[Id], [c].[IdLoaiCT], [c].[MaCT], [c].[TenCT], [c].[X], [c].[Y], [c0].[Id] AS [Id0], [c0].[IdCha], [c0].[MaLoaiCT], [c0].[TenLoaiCT]
+          FROM [CT_ThongTin] AS [c]
+          LEFT JOIN [CT_Loai] AS [c0] ON [c].[IdLoaiCT] = [c0].[Id]
+          WHERE [c].[DaXoa] = CAST(0 AS bit) AND [c0].[IdCha] = @__IdLoaiCT_0 AND LOWER([c].[TaiKhoan]) = @__ToLower_1
+          ORDER BY [c].[IdLoaiCT]
+          OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+      ) AS [t]
+      LEFT JOIN [CT_ThongSo] AS [c1] ON [t].[Id] = [c1].[IdCT]
+      LEFT JOIN [GP_ThongTin] AS [g] ON [t].[Id] = [g].[IdCT]
+      ORDER BY [t].[IdLoaiCT], [t].[Id], [t].[Id0], [c1].[Id]
+warn: Microsoft.EntityFrameworkCore.Query[20504]
+      Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (200ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [t].[ConstructionCode], [t].[StationCode], [t0].[Value], [t0].[Time], [t0].[Status], [t0].[c]
+      FROM (
+          SELECT [s].[ConstructionCode], [s].[StationCode]
+          FROM [StoragePreData] AS [s]
+          WHERE [s].[ConstructionCode] = N'NDDKSDAONGOCLYSON'
+          GROUP BY [s].[ConstructionCode], [s].[StationCode]
+      ) AS [t]
+      LEFT JOIN (
+          SELECT [t1].[Value], [t1].[Time], [t1].[Status], [t1].[c], [t1].[ConstructionCode], [t1].[StationCode]
+          FROM (
+              SELECT [s0].[Value], [s0].[Time], [s0].[Status], 1 AS [c], [s0].[ConstructionCode], [s0].[StationCode], ROW_NUMBER() OVER(PARTITION BY [s0].[ConstructionCode], [s0].[StationCode] ORDER BY [s0].[Time] DESC) AS [row]
+              FROM [StoragePreData] AS [s0]
+              WHERE [s0].[ConstructionCode] = N'NDDKSDAONGOCLYSON'
+          ) AS [t1]
+          WHERE [t1].[row] <= 1
+      ) AS [t0] ON ([t].[ConstructionCode] = [t0].[ConstructionCode] OR (([t].[ConstructionCode] IS NULL) AND ([t0].[ConstructionCode] IS NULL))) AND ([t].[StationCode] = [t0].[StationCode] OR (([t].[StationCode] IS NULL) AND ([t0].[StationCode] IS NULL)))
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (230ms) [Parameters=[@__ToLower_0='nddksdaongoclyson' (Size = 4000), @__p_1='0', @__p_2='1000'], CommandType='Text', CommandTimeout='120']
+      SELECT [t].[Id], [t].[CapCT], [t].[ChuThich], [t].[DaXoa], [t].[IdLoaiCT], [t].[IdLuuVuc], [t].[IdSong], [t].[IdTangChuaNuoc], [t].[IdTieuLuuVuc], [t].[KhoiLuongCacHangMucTD], [t].[MaCT], [t].[MucDichHNK], [t].[MucDichKT], [t].[MucDichhTD], [t].[NamBatDauVanHanh], [t].[NguonNuocKT], [t].[PhuongThucKT], [t].[QKTThietKe], [t].[QKTThucTe], [t].[QuyMoHNK], [t].[SoDiemXaThai], [t].[SoLuongGieng], [t].[SoLuongGiengKT], [t].[SoLuongGiengQT], [t].[TaiKhoan], [t].[TaiKhoanSua], [t].[TaiKhoanTao], [t].[TenCT], [t].[ThoiGianHNK], [t].[ThoiGianKT], [t].[ThoiGianSua], [t].[ThoiGianTao], [t].[ThoiGianXD], [t].[ViTriCT], [t].[ViTriXT], [t].[X], [t].[Y], [c0].[Id], [c0].[ChuThich], [c0].[DaXoa], [c0].[IdCha], [c0].[MaLoaiCT], [c0].[TaiKhoanSua], [c0].[TaiKhoanTao], [c0].[TenLoaiCT], [c0].[ThoiGianSua], [c0].[ThoiGianTao], [t0].[Id], [t0].[DaXoa], [t0].[KyHieuTCN], [t0].[SoLuongGiengQT], [t0].[TaiKhoanSua], [t0].[TaiKhoanTao], [t0].[TenTCN], [t0].[ThoiGianSua], [t0].[ThoiGianTao], [c1].[Id], [l].[Id], [t1].[Id], [t1].[ChuThich], [t1].[DaXoa], [t1].[IdCT], [t1].[IdTangChuaNuoc], [t1].[TaiKhoanSua], [t1].[TaiKhoanTao], [t1].[TenHangMuc], [t1].[ThoiGianSua], [t1].[ThoiGianTao], [t1].[V?TriHangMuc], [t1].[X], [t1].[Y], [t1].[Id0], [t1].[CaoTrinhCong], [t1].[CaoTrinhDap], [t1].[CheDoKT], [t1].[CheDoXT], [t1].[ChieuCaoDap], [t1].[ChieuDaiCong], [t1].[ChieuDaiDap], [t1].[ChieuRongDap], [t1].[ChieuSauDoanThuNuocDen], [t1].[ChieuSauDoanThuNuocTu], [t1].[CongSuatBom], [t1].[CongSuatDamBao], [t1].[CongSuatLM], [t1].[DienTichLuuVuc], [t1].[DienTichTuoiThietKe], [t1].[DienTichTuoiThucTe], [t1].[DungTichChet], [t1].[DungTichHuuIch], [t1].[DungTichToanBo], [t1].[DuongKinhCong], [t1].[HBeHut], [t1].[HDatOngLocDen], [t1].[HDatOngLocTu], [t1].[HDoanThuNuocDen], [t1].[HDoanThuNuocTu], [t1].[HDong], [t1].[HGiengKT], [t1].[HHaLuu], [t1].[HHaThap], [t1].[HThuongLuu], [t1].[HTinh], [t1].[Hgieng], [t1].[Hlu], [t1].[Hmax], [t1].[Hmin], [t1].[HtoiThieu], [t1].[IdCT0], [t1].[IdHangMucCT], [t1].[KichThuocCong], [t1].[KqKf], [t1].[LuongNuocKT], [t1].[MNC], [t1].[MNDBT], [t1].[MNLKT], [t1].[MNLTK], [t1].[MuaTrungBinhNam], [t1].[MucNuocDong], [t1].[MucNuocTinh], [t1].[NguonNuocXT], [t1].[NguongTran], [t1].[PhuongThucXT], [t1].[QBomLonNhat], [t1].[QBomThietKe], [t1].[QDamBao], [t1].[QKTCapNuocSinhHoat], [t1].[QKTLonNhat], [t1].[QKhaiThac], [t1].[QLonNhatTruocLu], [t1].[QMaxKT], [t1].[QMaxXaThai], [t1].[QThietKe], [t1].[QThucTe], [t1].[QTrungBinhNam], [t1].[QXaThai], [t1].[QXaThaiLonNhat], [t1].[QXaThaiTB], [t1].[QXaTran], [t1].[QmaxNM], [t1].[Qtt], [t1].[SoLuongMayBom], [t1].[ThoiGianBomLonNhat], [t1].[ThoiGianBomNhoNhat], [t1].[ThoiGianBomTB], [c1].[CaoTrinhCong], [c1].[CaoTrinhDap], [c1].[CheDoKT], [c1].[CheDoXT], [c1].[ChieuCaoDap], [c1].[ChieuDaiCong], [c1].[ChieuDaiDap], [c1].[ChieuRongDap], [c1].[ChieuSauDoanThuNuocDen], [c1].[ChieuSauDoanThuNuocTu], [c1].[CongSuatBom], [c1].[CongSuatDamBao], [c1].[CongSuatLM], [c1].[DienTichLuuVuc], [c1].[DienTichTuoiThietKe], [c1].[DienTichTuoiThucTe], [c1].[DungTichChet], [c1].[DungTichHuuIch], [c1].[DungTichToanBo], [c1].[DuongKinhCong], [c1].[HBeHut], [c1].[HDatOngLocDen], [c1].[HDatOngLocTu], [c1].[HDoanThuNuocDen], [c1].[HDoanThuNuocTu], [c1].[HDong], [c1].[HGiengKT], [c1].[HHaLuu], [c1].[HHaThap], [c1].[HThuongLuu], [c1].[HTinh], [c1].[Hgieng], [c1].[Hlu], [c1].[Hmax], [c1].[Hmin], [c1].[HtoiThieu], [c1].[IdCT], [c1].[IdHangMucCT], [c1].[KichThuocCong], [c1].[KqKf], [c1].[LuongNuocKT], [c1].[MNC], [c1].[MNDBT], [c1].[MNLKT], [c1].[MNLTK], [c1].[MuaTrungBinhNam], [c1].[MucNuocDong], [c1].[MucNuocTinh], [c1].[NguonNuocXT], [c1].[NguongTran], [c1].[PhuongThucXT], [c1].[QBomLonNhat], [c1].[QBomThietKe], [c1].[QDamBao], [c1].[QKTCapNuocSinhHoat], [c1].[QKTLonNhat], [c1].[QKhaiThac], [c1].[QLonNhatTruocLu], [c1].[QMaxKT], [c1].[QMaxXaThai], [c1].[QThietKe], [c1].[QThucTe], [c1].[QTrungBinhNam], [c1].[QXaThai], [c1].[QXaThaiLonNhat], [c1].[QXaThaiTB], [c1].[QXaTran], [c1].[QmaxNM], [c1].[Qtt], [c1].[SoLuongMayBom], [c1].[ThoiGianBomLonNhat], [c1].[ThoiGianBomNhoNhat], [c1].[ThoiGianBomTB], [l].[BanDo], [l].[ChieuDaiSongChinh], [l].[ChuGiai], [l].[DaXoa], [l].[DienTich], [l].[FileKML], [l].[IdHuyen], [l].[IdXa], [l].[NgayBatDau], [l].[NgayKetThuc], [l].[SoQuyTrinh], [l].[TaiKhoanSua], [l].[TaiKhoanTao], [l].[TenLVS], [l].[ThoiGianSua], [l].[ThoiGianTao], [l].[ViTriQT], [t2].[Id], [t2].[IdCongTrinh], [t2].[IdHuyen], [t2].[IdXa], [t2].[IdXa0], [t2].[CapHanhChinh], [t2].[DaXoa], [t2].[IdHuyen0], [t2].[TaiKhoanSua], [t2].[TaiKhoanTao], [t2].[TenXa], [t2].[ThoiGianSua], [t2].[ThoiGianTao], [t2].[IdHuyen1], [t2].[CapHanhChinh0], [t2].[DaXoa0], [t2].[TaiKhoanSua0], [t2].[TaiKhoanTao0], [t2].[TenHuyen], [t2].[ThoiGianSua0], [t2].[ThoiGianTao0], [t3].[Id], [t3].[CoQuanCapPhep], [t3].[DaBiThuHoi], [t3].[DaXoa], [t3].[FileDonXinCP], [t3].[FileGiayPhep], [t3].[FileGiayToLienQuan], [t3].[IdCT], [t3].[IdCon], [t3].[IdLoaiGP], [t3].[IdTCCN], [t3].[NgayCoHieuLuc], [t3].[NgayHetHieuLuc], [t3].[NgayKy], [t3].[SoGP], [t3].[TaiKhoanSua], [t3].[TaiKhoanTao], [t3].[TenGP], [t3].[ThoiGianSua], [t3].[ThoiGianTao], [t3].[ThoiHan], [t3].[TrangThaiCapPhep], [t3].[Id0], [t3].[DaXoa0], [t3].[DiaChi], [t3].[Email], [t3].[Fax], [t3].[GiamDoc], [t3].[MaSoThue], [t3].[NguoiDaiDienPhapLuat], [t3].[NguoiDuocUyQuyen], [t3].[SDT], [t3].[TaiKhoan], [t3].[TaiKhoanSua0], [t3].[TaiKhoanTao0], [t3].[TenTCCN], [t3].[ThoiGianSua0], [t3].[ThoiGianTao0], [t3].[Id1], [t3].[IdGP], [t3].[IdTCQ], [t3].[Id00], [t3].[CoQuanCP], [t3].[DaXoa1], [t3].[FilePDF], [t3].[GhiChu], [t3].[IdCon0], [t3].[NgayKy0], [t3].[SoQDTCQ], [t3].[TaiKhoanSua1], [t3].[TaiKhoanTao1], [t3].[ThoiGianSua1], [t3].[ThoiGianTao1], [t3].[TongTienCQ], [t7].[Id], [t7].[DaXoa], [t7].[DonViDo], [t7].[GhiChu], [t7].[IdCT], [t7].[IdMucDich], [t7].[LuuLuong], [t7].[TaiKhoanSua], [t7].[TaiKhoanTao], [t7].[ThoiGianSua], [t7].[ThoiGianTao], [t7].[Id0], [t7].[DaXoa0], [t7].[MucDich], [t7].[TaiKhoanSua0], [t7].[TaiKhoanTao0], [t7].[ThoiGianSua0], [t7].[ThoiGianTao0]
+      FROM (
+          SELECT [c].[Id], [c].[CapCT], [c].[ChuThich], [c].[DaXoa], [c].[IdLoaiCT], [c].[IdLuuVuc], [c].[IdSong], [c].[IdTangChuaNuoc], [c].[IdTieuLuuVuc], [c].[KhoiLuongCacHangMucTD], [c].[MaCT], [c].[MucDichHNK], [c].[MucDichKT], [c].[MucDichhTD], [c].[NamBatDauVanHanh], [c].[NguonNuocKT], [c].[PhuongThucKT], [c].[QKTThietKe], [c].[QKTThucTe], [c].[QuyMoHNK], [c].[SoDiemXaThai], [c].[SoLuongGieng], [c].[SoLuongGiengKT], [c].[SoLuongGiengQT], [c].[TaiKhoan], [c].[TaiKhoanSua], [c].[TaiKhoanTao], [c].[TenCT], [c].[ThoiGianHNK], [c].[ThoiGianKT], [c].[ThoiGianSua], [c].[ThoiGianTao], [c].[ThoiGianXD], [c].[ViTriCT], [c].[ViTriXT], [c].[X], [c].[Y]
+          FROM [CT_ThongTin] AS [c]
+          WHERE [c].[DaXoa] = CAST(0 AS bit) AND LOWER([c].[TaiKhoan]) = @__ToLower_0
+          ORDER BY [c].[IdLoaiCT]
+          OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+      ) AS [t]
+      LEFT JOIN [CT_Loai] AS [c0] ON [t].[IdLoaiCT] = [c0].[Id]
+      LEFT JOIN [TangChuaNuoc] AS [t0] ON [t].[IdTangChuaNuoc] = [t0].[Id]
+      LEFT JOIN [CT_ThongSo] AS [c1] ON [t].[Id] = [c1].[IdCT]
+      LEFT JOIN [LuuVucSong] AS [l] ON [t].[IdLuuVuc] = [l].[Id]
+      LEFT JOIN (
+          SELECT [c2].[Id], [c2].[ChuThich], [c2].[DaXoa], [c2].[IdCT], [c2].[IdTangChuaNuoc], [c2].[TaiKhoanSua], [c2].[TaiKhoanTao], [c2].[TenHangMuc], [c2].[ThoiGianSua], [c2].[ThoiGianTao], [c2].[V?TriHangMuc], [c2].[X], [c2].[Y], [c3].[Id] AS [Id0], [c3].[CaoTrinhCong], [c3].[CaoTrinhDap], [c3].[CheDoKT], [c3].[CheDoXT], [c3].[ChieuCaoDap], [c3].[ChieuDaiCong], [c3].[ChieuDaiDap], [c3].[ChieuRongDap], [c3].[ChieuSauDoanThuNuocDen], [c3].[ChieuSauDoanThuNuocTu], [c3].[CongSuatBom], [c3].[CongSuatDamBao], [c3].[CongSuatLM], [c3].[DienTichLuuVuc], [c3].[DienTichTuoiThietKe], [c3].[DienTichTuoiThucTe], [c3].[DungTichChet], [c3].[DungTichHuuIch], [c3].[DungTichToanBo], [c3].[DuongKinhCong], [c3].[HBeHut], [c3].[HDatOngLocDen], [c3].[HDatOngLocTu], [c3].[HDoanThuNuocDen], [c3].[HDoanThuNuocTu], [c3].[HDong], [c3].[HGiengKT], [c3].[HHaLuu], [c3].[HHaThap], [c3].[HThuongLuu], [c3].[HTinh], [c3].[Hgieng], [c3].[Hlu], [c3].[Hmax], [c3].[Hmin], [c3].[HtoiThieu], [c3].[IdCT] AS [IdCT0], [c3].[IdHangMucCT], [c3].[KichThuocCong], [c3].[KqKf], [c3].[LuongNuocKT], [c3].[MNC], [c3].[MNDBT], [c3].[MNLKT], [c3].[MNLTK], [c3].[MuaTrungBinhNam], [c3].[MucNuocDong], [c3].[MucNuocTinh], [c3].[NguonNuocXT], [c3].[NguongTran], [c3].[PhuongThucXT], [c3].[QBomLonNhat], [c3].[QBomThietKe], [c3].[QDamBao], [c3].[QKTCapNuocSinhHoat], [c3].[QKTLonNhat], [c3].[QKhaiThac], [c3].[QLonNhatTruocLu], [c3].[QMaxKT], [c3].[QMaxXaThai], [c3].[QThietKe], [c3].[QThucTe], [c3].[QTrungBinhNam], [c3].[QXaThai], [c3].[QXaThaiLonNhat], [c3].[QXaThaiTB], [c3].[QXaTran], [c3].[QmaxNM], [c3].[Qtt], [c3].[SoLuongMayBom], [c3].[ThoiGianBomLonNhat], [c3].[ThoiGianBomNhoNhat], [c3].[ThoiGianBomTB]
+          FROM [CT_HangMuc] AS [c2]
+          LEFT JOIN [CT_ThongSo] AS [c3] ON [c2].[Id] = [c3].[IdHangMucCT]
+      ) AS [t1] ON [t].[Id] = [t1].[IdCT]
+      LEFT JOIN (
+          SELECT [c4].[Id], [c4].[IdCongTrinh], [c4].[IdHuyen], [c4].[IdXa], [x].[IdXa] AS [IdXa0], [x].[CapHanhChinh], [x].[DaXoa], [x].[IdHuyen] AS [IdHuyen0], [x].[TaiKhoanSua], [x].[TaiKhoanTao], [x].[TenXa], [x].[ThoiGianSua], [x].[ThoiGianTao], [h].[IdHuyen] AS [IdHuyen1], [h].[CapHanhChinh] AS [CapHanhChinh0], [h].[DaXoa] AS [DaXoa0], [h].[TaiKhoanSua] AS [TaiKhoanSua0], [h].[TaiKhoanTao] AS [TaiKhoanTao0], [h].[TenHuyen], [h].[ThoiGianSua] AS [ThoiGianSua0], [h].[ThoiGianTao] AS [ThoiGianTao0]
+          FROM [CT_ViTri] AS [c4]
+          LEFT JOIN [Xa] AS [x] ON [c4].[IdXa] = [x].[IdXa]
+          LEFT JOIN [Huyen] AS [h] ON [c4].[IdHuyen] = [h].[IdHuyen]
+      ) AS [t2] ON [t].[Id] = [t2].[IdCongTrinh]
+      LEFT JOIN (
+          SELECT [g].[Id], [g].[CoQuanCapPhep], [g].[DaBiThuHoi], [g].[DaXoa], [g].[FileDonXinCP], [g].[FileGiayPhep], [g].[FileGiayToLienQuan], [g].[IdCT], [g].[IdCon], [g].[IdLoaiGP], [g].[IdTCCN], [g].[NgayCoHieuLuc], [g].[NgayHetHieuLuc], [g].[NgayKy], [g].[SoGP], [g].[TaiKhoanSua], [g].[TaiKhoanTao], [g].[TenGP], [g].[ThoiGianSua], [g].[ThoiGianTao], [g].[ThoiHan], [g].[TrangThaiCapPhep], [t4].[Id] AS [Id0], [t4].[DaXoa] AS [DaXoa0], [t4].[DiaChi], [t4].[Email], [t4].[Fax], [t4].[GiamDoc], [t4].[MaSoThue], [t4].[NguoiDaiDienPhapLuat], [t4].[NguoiDuocUyQuyen], [t4].[SDT], [t4].[TaiKhoan], [t4].[TaiKhoanSua] AS [TaiKhoanSua0], [t4].[TaiKhoanTao] AS [TaiKhoanTao0], [t4].[TenTCCN], [t4].[ThoiGianSua] AS [ThoiGianSua0], [t4].[ThoiGianTao] AS [ThoiGianTao0], [t5].[Id] AS [Id1], [t5].[IdGP], [t5].[IdTCQ], [t5].[Id0] AS [Id00], [t5].[CoQuanCP], [t5].[DaXoa] AS [DaXoa1], [t5].[FilePDF], [t5].[GhiChu], [t5].[IdCon] AS [IdCon0], [t5].[NgayKy] AS [NgayKy0], [t5].[SoQDTCQ], [t5].[TaiKhoanSua] AS [TaiKhoanSua1], [t5].[TaiKhoanTao] AS [TaiKhoanTao1], [t5].[ThoiGianSua] AS [ThoiGianSua1], [t5].[ThoiGianTao] AS [ThoiGianTao1], [t5].[TongTienCQ]
+          FROM [GP_ThongTin] AS [g]
+          LEFT JOIN [ToChuc_CaNhan] AS [t4] ON [g].[IdTCCN] = [t4].[Id]
+          LEFT JOIN (
+              SELECT [g0].[Id], [g0].[IdGP], [g0].[IdTCQ], [t6].[Id] AS [Id0], [t6].[CoQuanCP], [t6].[DaXoa], [t6].[FilePDF], [t6].[GhiChu], [t6].[IdCon], [t6].[NgayKy], [t6].[SoQDTCQ], [t6].[TaiKhoanSua], [t6].[TaiKhoanTao], [t6].[ThoiGianSua], [t6].[ThoiGianTao], [t6].[TongTienCQ]
+              FROM [GP_TCQ] AS [g0]
+              INNER JOIN [TCQ_ThongTin] AS [t6] ON [g0].[IdTCQ] = [t6].[Id]
+          ) AS [t5] ON [g].[Id] = [t5].[IdGP]
+      ) AS [t3] ON [t].[Id] = [t3].[IdCT]
+      LEFT JOIN (
+          SELECT [l0].[Id], [l0].[DaXoa], [l0].[DonViDo], [l0].[GhiChu], [l0].[IdCT], [l0].[IdMucDich], [l0].[LuuLuong], [l0].[TaiKhoanSua], [l0].[TaiKhoanTao], [l0].[ThoiGianSua], [l0].[ThoiGianTao], [m].[Id] AS [Id0], [m].[DaXoa] AS [DaXoa0], [m].[MucDich], [m].[TaiKhoanSua] AS [TaiKhoanSua0], [m].[TaiKhoanTao] AS [TaiKhoanTao0], [m].[ThoiGianSua] AS [ThoiGianSua0], [m].[ThoiGianTao] AS [ThoiGianTao0]
+          FROM [LuuLuongTheoMucDich] AS [l0]
+          LEFT JOIN [MucDichKT] AS [m] ON [l0].[IdMucDich] = [m].[Id]
+      ) AS [t7] ON [t].[Id] = [t7].[IdCT]
+      ORDER BY [t].[IdLoaiCT], [t].[Id], [c0].[Id], [t0].[Id], [c1].[Id], [l].[Id], [t1].[Id], [t1].[Id0], [t2].[Id], [t2].[IdXa0], [t2].[IdHuyen1], [t3].[NgayKy] DESC, [t3].[Id], [t3].[Id0], [t3].[Id1], [t3].[Id00], [t7].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (49ms) [Parameters=[@__keyword_0='nddksdaongoclyson' (Size = 4000), @__StartDate_1='2026-03-17T15:49:56.4734730' (Nullable = true), @__EndDate_2='2026-03-18T15:49:56.4734730' (Nullable = true)], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[ConstructionCode], [s].[DeviceStatus], [s].[ParameterName], [s].[StationCode], [s].[Status], [s].[Time], [s].[Unit], [s].[Value]
+      FROM [StoragePreData] AS [s]
+      WHERE [s].[Status] = CAST(1 AS bit) AND ((@__keyword_0 LIKE N'') OR CHARINDEX(@__keyword_0, LOWER([s].[ConstructionCode])) > 0) AND [s].[Time] >= @__StartDate_1 AND [s].[Time] <= @__EndDate_2
+      ORDER BY [s].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (21ms) [Parameters=[@__p_0='d13b77d4-01fe-4320-bf91-737f14b20d02' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedTime], [a].[CreatedUser], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[IdHuyen], [a].[IsDeleted], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedTime], [a].[ModifiedUser], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PasswordSalt], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+      FROM [AspNetUsers] AS [a]
+      WHERE [a].[Id] = @__p_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [s].[Id], [s].[ConstructionCode], [s].[DeviceStatus], [s].[ParameterName], [s].[StationCode], [s].[Status], [s].[Time], [s].[Unit], [s].[Value]
+      FROM [StoragePreData] AS [s]
+      WHERE 0 = 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [s].[Id], [s].[ConstructionCode], [s].[DeviceStatus], [s].[ParameterName], [s].[StationCode], [s].[Status], [s].[Time], [s].[Unit], [s].[Value]
+      FROM [StoragePreData] AS [s]
+      WHERE 0 = 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [s].[Id], [s].[ConstructionCode], [s].[DeviceStatus], [s].[ParameterName], [s].[StationCode], [s].[Status], [s].[Time], [s].[Unit], [s].[Value]
+      FROM [StoragePreData] AS [s]
+      WHERE 0 = 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (300ms) [Parameters=[@p0='NDDKSDAONGOCLYSON' (Size = 4000), @p1='0', @p2=NULL (Size = 4000), @p3='KHAITHAC' (Size = 4000), @p4='True', @p5='2026-03-18T15:50:00.0000000', @p6=NULL (Size = 4000), @p7='3', @p8='NDDKSDAONGOCLYSON' (Size = 4000), @p9='0', @p10=NULL (Size = 4000), @p11='MUCNUOCKHAITHAC' (Size = 4000), @p12='True', @p13='2026-03-18T15:50:00.0000000', @p14=NULL (Size = 4000), @p15='19', @p16='NDDKSDAONGOCLYSON' (Size = 4000), @p17='0', @p18=NULL (Size = 4000), @p19='MUCNUOCQUANTRAC' (Size = 4000), @p20='True', @p21='2026-03-18T15:50:00.0000000', @p22=NULL (Size = 4000), @p23='1'], CommandType='Text', CommandTimeout='30']
+      SET IMPLICIT_TRANSACTIONS OFF;
+      SET NOCOUNT ON;
+      MERGE [StoragePreData] USING (
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, 0),
+      (@p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, 1),
+      (@p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, 2)) AS i ([ConstructionCode], [DeviceStatus], [ParameterName], [StationCode], [Status], [Time], [Unit], [Value], _Position) ON 1=0
+      WHEN NOT MATCHED THEN
+      INSERT ([ConstructionCode], [DeviceStatus], [ParameterName], [StationCode], [Status], [Time], [Unit], [Value])
+      VALUES (i.[ConstructionCode], i.[DeviceStatus], i.[ParameterName], i.[StationCode], i.[Status], i.[Time], i.[Unit], i.[Value])
+      OUTPUT INSERTED.[Id], i._Position;
+fail: Microsoft.EntityFrameworkCore.Update[10000]
+      An exception occurred in the database while saving changes for context type 'tnmt_qn.Data.DatabaseContext'.
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'QuangNgaiEnv.dbo.StoragePreData'; column does not allow nulls. UPDATE fails.
+         at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+         at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+         at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+         at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+      ClientConnectionId:2dfe8e3a-aab1-438b-9003-3e7cf429435f
+      Error Number:515,State:2,Class:16
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'QuangNgaiEnv.dbo.StoragePreData'; column does not allow nulls. UPDATE fails.
+         at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+         at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+         at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+         at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+      ClientConnectionId:2dfe8e3a-aab1-438b-9003-3e7cf429435f
+      Error Number:515,State:2,Class:16
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+fail: Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Id', table 'QuangNgaiEnv.dbo.StoragePreData'; column does not allow nulls. UPDATE fails.
+         at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+         at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+         at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+         at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+         at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+      ClientConnectionId:2dfe8e3a-aab1-438b-9003-3e7cf429435f
+      Error Number:515,State:2,Class:16
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at tnmt_qn.Service.StoragePreDataService.SaveAsync(List`1 dtos) in D:\WORK\GitHub\gstnmt-qn\API\tnmt_qn\Service\StoragePreDataService.cs:line 93
+         at tnmt_qn.Controllers.StoragePreDataController.Save(List`1 dtos) in D:\WORK\GitHub\gstnmt-qn\API\tnmt_qn\Controllers\StoragePreDataController.cs:line 40
+         at lambda_method3469(Closure, Object)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|8_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
